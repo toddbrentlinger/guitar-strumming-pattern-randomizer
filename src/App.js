@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import StrummingPatternBase from './components/StrummingPatternBase';
+import StrummingPattern from './StrummingPattern';
+import CustomStrummingPatternComponent from './components/CustomStrummingPatternComponent';
 
 function App() {
     return (
@@ -23,6 +25,9 @@ function App() {
             </header>
             <StrummingPatternBase
                 strummingPattern={[true, false, true, true, false, true, true, false]}
+            />
+            <CustomStrummingPatternComponent
+                strummingPattern={new StrummingPattern([true, false, true, true, false, true, true, false])}
             />
             <div className="button-container">
                 <button>Randomize</button>

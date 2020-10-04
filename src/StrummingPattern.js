@@ -1,5 +1,3 @@
-"use strict";
-
 class StrummingPattern {
     /**
      * @constructor
@@ -7,6 +5,14 @@ class StrummingPattern {
      */
     constructor(strummingPatternBoolArr) {
         this.boolArr = strummingPatternBoolArr;
+    }
+
+    /**
+     * Randomizes strumming pattern while keeping selected strums the same.
+     * @param {Boolean[]} isStrumLockedBoolArr
+     */
+    randomize(isStrumLockedBoolArr) {
+
     }
 
     /**
@@ -43,3 +49,5 @@ class StrummingPattern {
         );
     }
 }
+
+export default StrummingPattern;
