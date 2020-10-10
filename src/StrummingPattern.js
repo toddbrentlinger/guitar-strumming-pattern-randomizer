@@ -4,7 +4,7 @@ class StrummingPattern {
      * @param {Boolean[]} strummingPatternBoolArr
      */
     constructor(strummingPatternBoolArr) {
-        this.boolArr = strummingPatternBoolArr;
+        this.strums = strummingPatternBoolArr;
     }
 
     /**
@@ -17,6 +17,8 @@ class StrummingPattern {
 
     /**
      * Returns Number of strum on down strums or String "+" for up strums.
+     * 1,3,5,7 – correspond to down (D) strums 1,2,3,4
+     * 2,4,6,8 – correspond to up (U) strums '+'
      * @param {Number} i
      * @returns {Number|String}
      */
@@ -26,11 +28,16 @@ class StrummingPattern {
 
     /**
      * Returns String of "U" for up strums or "D" for down strums.
-     * @param {Number} i
+     * 1,3,5,7 – correspond to down (D) strums 1,2,3,4
+     * 2,4,6,8 – correspond to up (U) strums '+'
+     * @param {Number} strumIndex
+     * @param {Boolean} selectedBool
      * @returns {String}
      */
-    static getStrumDirection(i) {
-        return i % 2 ? "U" : "D";
+    static getStrumDirection(strumIndex, selectedBool = true) {
+        return selectedBool
+            ? strumIndex % 2 ? "U" : "D"
+            : "-";
     }
 
     /**
@@ -40,12 +47,12 @@ class StrummingPattern {
      */
     static isEqual(first, second) {
         // Compare array lengths
-        if (first.boolArr.length !== second.boolArr.length)
+        if (first.strums.length !== second.strums.length)
             return false;
 
         // Compare each array index value
-        return first.boolArr.every(
-            (boolVal, i) => boolVal === second.boolArr[i]
+        return first.strums.every(
+            (boolVal, i) => boolVal === second.strums[i]
         );
     }
 }

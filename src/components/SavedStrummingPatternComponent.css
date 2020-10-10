@@ -1,0 +1,8 @@
+.saved-strumming-pattern-container {
+    display: inline-block;
+    margin: auto;
+}
+
+.saved-strumming-pattern-container .strum-container {
+    cursor: default;
+}

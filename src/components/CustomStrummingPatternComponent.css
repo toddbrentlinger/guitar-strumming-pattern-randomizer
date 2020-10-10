@@ -8,9 +8,18 @@
     text-align: center;
 }
 
-.strum-container {
+.custom-strum-container {
     padding: 1em;
     border-style: solid;
     border-width: thin;
     border-color: rgba(0, 0, 0, 0.2);
+}
+
+.lock-icon-container {
+    cursor: pointer;
+    padding: .2em 0;
+}
+
+.strum-container {
+    cursor: pointer;
 }

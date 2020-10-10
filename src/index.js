@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import StrummingPattern from './StrummingPattern';
+
+// Check localStorage for saved strum pattern list
+const SAVED_STRUM_PATTERN_LIST = [
+    new StrummingPattern([true, false, true, true, false, true, true, false]),
+    new StrummingPattern([true, false, true, false, true, true, true, false])
+];
+
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <App savedStrumList={SAVED_STRUM_PATTERN_LIST} />
     </React.StrictMode>,
     document.getElementById('root')
 );
