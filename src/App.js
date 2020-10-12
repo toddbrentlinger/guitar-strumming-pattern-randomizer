@@ -2,25 +2,32 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import StrummingPattern from './StrummingPattern';
-import CustomStrummingPatternComponent from './components/CustomStrummingPatternComponent';
-import SavedStrummingPatternListComponent from './components/SavedStrummingPatternListComponent';
+import StrumPattern from './StrumPattern';
+import CustomStrumPattern from './components/CustomStrumPattern';
+import SavedStrumPatternList from './components/SavedStrumPatternList';
 
 function App(props) {
     const [savedStrumList, setSavedStrumList] = useState(props.savedStrumList);
 
     /**
      * Saves strumming pattern to list after checking if NOT already in saved list.
-     * @param {StrummingPattern} strumPattern
+     * @param {StrumPattern} strumPattern
      */
     function saveStrumPattern(strumPattern) {
-        console.log(`Strum Pattern \n[${strumPattern.strums}]\nsaved to list`);
         // If strumPattern is already in saved list, return with message
 
         // Save strumPattern to saved list
         let newSavedStrumList = savedStrumList.slice();
         newSavedStrumList.push(strumPattern);
         setSavedStrumList(newSavedStrumList);
+    }
+
+    function clearSavedStrumList() {
+        // Open message box asking User, "Are you sure? Y/N"
+
+        if (savedStrumList.length) {
+            setSavedStrumList([]);
+        }
     }
 
     return (
@@ -39,12 +46,13 @@ function App(props) {
                   Learn React
                 </a>
             </header>
-            <CustomStrummingPatternComponent
-                strummingPattern={new StrummingPattern([true, false, true, true, false, true, true, false])}
+            <CustomStrumPattern
+                strummingPattern={new StrumPattern([true, false, true, true, false, true, true, false])}
                 saveStrumPattern={saveStrumPattern}
             />
-            <SavedStrummingPatternListComponent
-                savedStrumList={props.savedStrumList}
+            <SavedStrumPatternList
+                savedStrumList={savedStrumList}
+                clearListFunc={clearSavedStrumList}
             />
         </div>
     );

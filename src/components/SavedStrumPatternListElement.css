@@ -1,0 +1,7 @@
+.saved-strum-pattern-list-element-container {
+    display: flex;
+}
+
+.saved-strum-pattern-list-element-button-container > button {
+    cursor: pointer;
+}

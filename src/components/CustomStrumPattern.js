@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './CustomStrummingPatternComponent.css';
-import StrummingPattern from '../StrummingPattern.js';
+import './CustomStrumPattern.css';
+import StrumPattern from '../StrumPattern.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,17 +16,17 @@ function Strum(props) {
             <hr/>
             <div className="strum-container" onClick={props.strumOnClick}>
                 <div className="strum-num">
-                    {StrummingPattern.getStrumValue(props.strumNum)}
+                    {StrumPattern.getStrumValue(props.strumNum)}
                 </div>
                 <div className="strum-direction">
-                    {StrummingPattern.getStrumDirection(props.strumNum, props.selected)}
+                    {StrumPattern.getStrumDirection(props.strumNum, props.selected)}
                 </div>
             </div>
         </div>
     );
 }
 
-function CustomStrummingPatternComponent(props) {
+function CustomStrumPattern(props) {
     // Ex. D Du u D = [true, false, true, true, false, true, true, false]
     const [currentStrumPattern, setCurrentStrumPattern] = useState(props.strummingPattern);
     const [lockedStrums, setLockedStrums] = useState(new Array(8).fill(false));
@@ -34,7 +34,7 @@ function CustomStrummingPatternComponent(props) {
     function toggleStrum(i) {
         const newStrumPatternBoolArr = currentStrumPattern.strums.slice();
         newStrumPatternBoolArr[i] = !newStrumPatternBoolArr[i];
-        setCurrentStrumPattern(new StrummingPattern(newStrumPatternBoolArr));
+        setCurrentStrumPattern(new StrumPattern(newStrumPatternBoolArr));
     }
 
     function toggleLockedStrum(i) {
@@ -52,7 +52,12 @@ function CustomStrummingPatternComponent(props) {
                 }
                 return strum;
             });
-        setCurrentStrumPattern(new StrummingPattern(newStrumPatternBoolArr));
+        setCurrentStrumPattern(new StrumPattern(newStrumPatternBoolArr));
+    }
+
+    function reset() {
+        setCurrentStrumPattern(new StrumPattern(new Array(8).fill(true)));
+        setLockedStrums(new Array(8).fill(false));
     }
 
     const strumList = currentStrumPattern.strums.map((strumBool, i) => {
@@ -88,6 +93,7 @@ function CustomStrummingPatternComponent(props) {
                 </button>
                 <button
                     type="button"
+                    onClick={() => reset()}
                 >
                     Reset
                 </button>
@@ -96,4 +102,4 @@ function CustomStrummingPatternComponent(props) {
     );
 }
 
-export default CustomStrummingPatternComponent;
+export default CustomStrumPattern;

@@ -1,4 +1,4 @@
-class StrummingPattern {
+class StrumPattern {
     /**
      * @constructor
      * @param {Boolean[]} strummingPatternBoolArr
@@ -57,4 +57,4 @@ class StrummingPattern {
     }
 }
 
-export default StrummingPattern;
+export default StrumPattern;
