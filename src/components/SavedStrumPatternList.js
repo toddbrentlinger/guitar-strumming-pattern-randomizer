@@ -13,7 +13,9 @@ function SavedStrumPatternList(props) {
             <li key={i}>
                 <SavedStrumPatternListElement
                     strumPattern={strumPattern}
-                    listIndex={i+1}
+                    listIndex={i}
+                    moveListIndexFunc={props.moveListIndexFunc}
+                    removeListIndexFunc={props.removeListIndexFunc}
                 />
             </li>
         );

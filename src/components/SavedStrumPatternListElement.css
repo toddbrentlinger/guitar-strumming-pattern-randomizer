@@ -1,4 +1,9 @@
 .saved-strum-pattern-list-element-container {
+    display: inline-block;
+    margin: auto;
+}
+
+.saved-strum-pattern-list-element-container > .flex-container {
     display: flex;
 }
 
