@@ -7,6 +7,12 @@
     display: flex;
 }
 
+.saved-strum-pattern-list-element-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .saved-strum-pattern-list-element-button-container > button {
     cursor: pointer;
 }

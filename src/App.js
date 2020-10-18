@@ -46,6 +46,23 @@ function App(props) {
          *     move last element to first element
          */
 
+        // Return if oldIndex is equal to or greater than saved list length
+        if (oldIndex >= savedStrumList.length) {
+            return;
+        }
+        // Account for newIndex equal to or greater than saved list length
+        while (newIndex >= savedStrumList.length) {
+            newIndex -= savedStrumList.length;
+        }
+
+        // Account for negative indices
+        while (oldIndex < 0) {
+            oldIndex += savedStrumList.length;
+        }
+        while (newIndex < 0) {
+            newIndex += savedStrumList.length;
+        }
+
         let newArr = savedStrumList.slice();
         newArr.splice(newIndex, 0, newArr.splice(oldIndex, 1)[0]);
         setSavedStrumList(newArr);

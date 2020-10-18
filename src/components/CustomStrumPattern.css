@@ -9,6 +9,7 @@
 }
 
 .custom-strum-container {
+    width: 1em;
     padding: 1em;
     border-style: solid;
     border-width: thin;

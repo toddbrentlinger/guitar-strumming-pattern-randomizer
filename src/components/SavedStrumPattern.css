@@ -1,6 +1,14 @@
 .saved-strumming-pattern-container {
     display: inline-block;
     margin: auto;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.saved-strumming-pattern-container .custom-strum-container {
+    padding: 1em .5em;
+    border-style: none;
 }
 
 .saved-strumming-pattern-container .strum-container {
