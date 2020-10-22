@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './CustomStrumPattern.css';
 import StrumPattern from '../StrumPattern.js';
+import ButtonRipple from './ButtonRipple';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
 
@@ -79,24 +80,9 @@ function CustomStrumPattern(props) {
                 <div className="strumming-pattern">{strumList}</div>
             </div>
             <div className="button-container">
-                <button
-                    type="button"
-                    onClick={() => randomize()}
-                >
-                    Randomize
-                </button>
-                <button
-                    type="button"
-                    onClick={() => props.saveStrumPattern(currentStrumPattern)}
-                >
-                    Save
-                </button>
-                <button
-                    type="button"
-                    onClick={() => reset()}
-                >
-                    Reset
-                </button>
+                <ButtonRipple onClick={randomize}>Randomize</ButtonRipple>
+                <ButtonRipple onClick={() => props.saveStrumPattern(currentStrumPattern)}>Save</ButtonRipple>
+                <ButtonRipple onClick={reset}>Reset</ButtonRipple>
             </div>
         </div>
     );

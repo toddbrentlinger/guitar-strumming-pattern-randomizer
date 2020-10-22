@@ -1,6 +1,7 @@
 .strumming-pattern-container {
     display: inline-block;
     margin: auto;
+    margin-top: 1em;
 }
 
 .strumming-pattern {

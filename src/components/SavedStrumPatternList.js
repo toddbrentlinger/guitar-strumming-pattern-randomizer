@@ -1,6 +1,7 @@
 import React from 'react';
 import SavedStrumPatternListElement from './SavedStrumPatternListElement';
 import './SavedStrumPatternList.css';
+import ButtonRipple from './ButtonRipple';
 /**
  * @param {Object} props
  * props = {
@@ -24,13 +25,8 @@ function SavedStrumPatternList(props) {
     return (
         <div className="saved-list-container">
             <h2>Saved Strumming Patterns</h2>
-            <button
-                type="button"
-                onClick={() => props.clearListFunc()}
-            >
-                Clear List
-            </button>
-            <button>Save as PDF</button>
+            <ButtonRipple onClick={props.clearListFunc}>Clear List</ButtonRipple>
+            <ButtonRipple>Save as PDF</ButtonRipple>
             <ol className="saved-strumming-pattern-list-container">
                 {strumPatternList}
             </ol>
