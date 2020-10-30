@@ -1,0 +1,18 @@
+Guitar Strumming Pattern Randomizer TODO List:
+
+- Add drag/drop functionality with Saved List strum patterns
+- Add linear gradient similar to JustinGuitar
+- Add :hover class to buttons, lock/unlock icon, and strums that increase size
+- From JustinGuitar:
+	body
+		background-color: #FEFFFF; #off-white
+	header
+		background: #193245;
+		background: linear-gradient(to bottom, #213c50 0%, #213c50 35%, #193245 36%, #193245 100%);
+	h1 - color: #6599ca
+	h2 - color: #4a73dd;
+	button
+		color: #3D73E4;
+		border: border: 2px solid #3D73E4;
+	content-body
+		background-color: #F4F3F2; #light-gray

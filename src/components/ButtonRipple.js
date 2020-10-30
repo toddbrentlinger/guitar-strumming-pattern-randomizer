@@ -9,8 +9,6 @@ function ButtonRipple(props) {
         const radius = Math.max(button.clientWidth, button.clientHeight) / 2;
 
         circle.style.width = circle.style.height = `${2 * radius}px`;
-        //circle.style.left = `${e.clientX - button.offsetLeft - radius}px`;
-        //circle.style.top = `${e.clientY - button.offsetTop - radius}px`;
         circle.style.left = `${e.clientX - pos.left - radius}px`;
         circle.style.top = `${e.clientY - pos.top - radius}px`;
         circle.classList.add('ripple');

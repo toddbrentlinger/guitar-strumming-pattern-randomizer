@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 //import logo from './logo.svg';
+import logo from './justin-guitar-header-logo.png';
 import './App.css';
 
 import StrumPattern from './StrumPattern';
@@ -83,18 +84,25 @@ function App(props) {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Guitar Strumming Pattern Randomizer</h1>
+                <div className="logo-container">
+                    <a href="https://www.justinguitar.com">
+                        <img src={logo} alt="Justin Guitar logo" />
+                    </a>
+                </div>
             </header>
-            <CustomStrumPattern
-                strummingPattern={new StrumPattern([true, false, true, true, false, true, true, false])}
-                saveStrumPattern={saveStrumPattern}
-            />
-            <SavedStrumPatternList
-                savedStrumList={savedStrumList}
-                clearListFunc={clearSavedStrumList}
-                moveListIndexFunc={moveSaveStrumListIndex}
-                removeListIndexFunc={removeSavedStrumListIndex}
-            />
+            <main>
+                <h1>Guitar Strumming Pattern Randomizer</h1>
+                <CustomStrumPattern
+                    strummingPattern={new StrumPattern([true, false, true, true, false, true, true, false])}
+                    saveStrumPattern={saveStrumPattern}
+                />
+                <SavedStrumPatternList
+                    savedStrumList={savedStrumList}
+                    clearListFunc={clearSavedStrumList}
+                    moveListIndexFunc={moveSaveStrumListIndex}
+                    removeListIndexFunc={removeSavedStrumListIndex}
+                />
+            </main>
             <FooterCustom />
         </div>
     );
