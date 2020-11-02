@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import './ButtonRipple.css';
+import debounce from '../utilities/debounce.js';
 
 function ButtonRipple(props) {
+    const debouncedLog = useCallback(
+        debounce(function () { console.log("Debounce!"); }, 3000)
+        , []);
+
+    const [rippleList, setRippleList] = useState([]);
+
+    function addRipple(e) {
+
+    }
+
+    function clearRippleContainer() {
+
+    }
+
     function createRipple(e) {
         const button = e.currentTarget;
         const pos = button.getBoundingClientRect();
@@ -33,8 +48,10 @@ function ButtonRipple(props) {
             className="button-ripple"
             type="button"
             onClick={handleClick}
+            onMouseUp={debouncedLog}
         >
             {props.children}
+            <div className="ripple-container"></div>
         </button>
     );
 }

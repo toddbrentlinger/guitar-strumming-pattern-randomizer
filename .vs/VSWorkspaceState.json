@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components"
+    "\\src\\components",
+    "\\src\\utilities"
   ],
-  "SelectedNode": "\\src\\components\\StrummingPatternBase.css",
+  "SelectedNode": "\\src\\utilities\\debounce.js",
   "PreviewInSolutionExplorer": false
 }
