@@ -1,22 +1,39 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useRef } from 'react';
 import './ButtonRipple.css';
 import debounce from '../utilities/debounce.js';
 
 function ButtonRipple(props) {
     const debouncedLog = useCallback(
-        debounce(function () { console.log("Debounce!"); }, 3000)
+        debounce(function () {
+            //console.log("Debounce!");
+            clearRipples();
+        }, 3000)
         , []);
 
-    const [rippleList, setRippleList] = useState([]);
+    const rippleContainerRef = useRef(null);
 
     function addRipple(e) {
+        const button = e.currentTarget;
+        const pos = button.getBoundingClientRect();
+        const circle = document.createElement('span');
+        const radius = Math.max(button.clientWidth, button.clientHeight) / 2;
 
+        circle.style.width = circle.style.height = `${2 * radius}px`;
+        circle.style.left = `${e.clientX - pos.left - radius}px`;
+        circle.style.top = `${e.clientY - pos.top - radius}px`;
+        circle.classList.add('ripple');
+
+        // Add ripple element to ripple container
+        rippleContainerRef.current.appendChild(circle);
     }
 
-    function clearRippleContainer() {
-
+    function clearRipples() {
+        const container = rippleContainerRef.current;
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
     }
-
+    /*
     function createRipple(e) {
         const button = e.currentTarget;
         const pos = button.getBoundingClientRect();
@@ -36,10 +53,12 @@ function ButtonRipple(props) {
 
         // Add ripple element to button
         button.appendChild(circle);
+        rippleContainerRef.current.appendChild(circle);
     }
-
+    */
     function handleClick(e) {
-        createRipple(e);
+        //createRipple(e);
+        addRipple(e);
         props.onClick();
     }
 
@@ -51,7 +70,10 @@ function ButtonRipple(props) {
             onMouseUp={debouncedLog}
         >
             {props.children}
-            <div className="ripple-container"></div>
+            <div
+                className="ripple-container"
+                ref={rippleContainerRef}
+            ></div>
         </button>
     );
 }
