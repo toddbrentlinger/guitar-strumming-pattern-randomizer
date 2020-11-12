@@ -18,6 +18,16 @@ function App(props) {
      */
     function saveStrumPattern(strumPattern) {
         // If strumPattern is already in saved list, return with message
+        let index = -1;
+        for (let i = 0; i < savedStrumList.length; i++) {
+            if (StrumPattern.isEqual(savedStrumList[i], strumPattern)) {
+                index = i;
+                break;
+            }
+        }
+        if (index !== -1) {
+            return window.alert(`Strum pattern already in Saved List at number: ${++index}`);
+        }
 
         // Save strumPattern to saved list
         let newSavedStrumList = savedStrumList.slice();
@@ -26,9 +36,12 @@ function App(props) {
     }
 
     function clearSavedStrumList() {
-        // Open message box asking User, "Are you sure? Y/N"
+        // If list is already empty, return
+        if (!savedStrumList.length)
+            return;
 
-        if (savedStrumList.length) {
+        // Open message box asking User, "Are you sure? Y/N"
+        if (window.confirm("Are you sure you want to clear the saved list of strum patterns?")) {
             setSavedStrumList([]);
         }
     }
