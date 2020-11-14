@@ -66,3 +66,7 @@ h1 {
 h2 {
     color: #4a73dd;
 }
+
+@media only screen and (min-width: 1000px) {
+
+}
