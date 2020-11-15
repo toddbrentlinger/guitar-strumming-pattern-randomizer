@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/guitar-strumming-pattern-randomizer/static/css/main.394c2136.chunk.css",
+    "main.js": "/guitar-strumming-pattern-randomizer/static/js/main.a246193d.chunk.js",
+    "main.js.map": "/guitar-strumming-pattern-randomizer/static/js/main.a246193d.chunk.js.map",
+    "runtime-main.js": "/guitar-strumming-pattern-randomizer/static/js/runtime-main.6039dbcc.js",
+    "runtime-main.js.map": "/guitar-strumming-pattern-randomizer/static/js/runtime-main.6039dbcc.js.map",
+    "static/js/2.f9ee378e.chunk.js": "/guitar-strumming-pattern-randomizer/static/js/2.f9ee378e.chunk.js",
+    "static/js/2.f9ee378e.chunk.js.map": "/guitar-strumming-pattern-randomizer/static/js/2.f9ee378e.chunk.js.map",
+    "index.html": "/guitar-strumming-pattern-randomizer/index.html",
+    "precache-manifest.bc565cf08298e46012916c99b367ff6f.js": "/guitar-strumming-pattern-randomizer/precache-manifest.bc565cf08298e46012916c99b367ff6f.js",
+    "service-worker.js": "/guitar-strumming-pattern-randomizer/service-worker.js",
+    "static/css/main.394c2136.chunk.css.map": "/guitar-strumming-pattern-randomizer/static/css/main.394c2136.chunk.css.map",
+    "static/js/2.f9ee378e.chunk.js.LICENSE.txt": "/guitar-strumming-pattern-randomizer/static/js/2.f9ee378e.chunk.js.LICENSE.txt",
+    "static/media/justin-guitar-header-logo.png": "/guitar-strumming-pattern-randomizer/static/media/justin-guitar-header-logo.df6a356d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6039dbcc.js",
+    "static/js/2.f9ee378e.chunk.js",
+    "static/css/main.394c2136.chunk.css",
+    "static/js/main.a246193d.chunk.js"
+  ]
+}
