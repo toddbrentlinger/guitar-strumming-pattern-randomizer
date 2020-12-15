@@ -1,8 +1,11 @@
 Guitar Strumming Pattern Randomizer TODO List:
 
+- Add snackbar error message when can not save pattern to list (when pattern already in list) that slides from bottom OR display red message below custom strum pattern that disappears after set time.
+- Add modal box for confirmation message when trying to clear list. Clicking anywhere but 'OK' will cancel and clear box.
+- Add tooltip with question mark icon on top right of custom strum pattern to explain toggle behaviour of lock icons and strums.
 - Add drag/drop functionality with Saved List strum patterns
-- Add linear gradient similar to JustinGuitar
-- Add :hover class to buttons, lock/unlock icon, and strums that increase size
+X Add linear gradient similar to JustinGuitar
+X Add :hover class to buttons, lock/unlock icon, and strums that increase size
 - From JustinGuitar:
 	body
 		background-color: #FEFFFF; #off-white
