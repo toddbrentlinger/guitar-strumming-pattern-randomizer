@@ -27,10 +27,15 @@ function SavedStrumPatternList(props) {
         const element = document.getElementById('saved-strumming-pattern-list');
         const opt = {
             margin: 1,
-            filename: 'Saved Strumming Patterns.pdf'
+            filename: 'Saved Strumming Patterns.pdf',
+            /*
+            html2Canvas: {
+                ignoreElements: (element) => (element.tagName == 'BUTTON')
+            }
+            */
         };
 
-        html2pdf(element, opt);
+        html2pdf().set(opt).from(element).save();
     }
 
     return (
