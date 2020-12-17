@@ -10,7 +10,7 @@ function SavedStrumPatternListElement(props) {
             <div className="flex-container">
                 <div className="saved-strum-pattern-list-element-button-container">
                     <button
-                        data-html2canvas-ignore
+                        //data-html2canvas-ignore
                         onClick={() => props.moveListIndexFunc(props.listIndex, props.listIndex - 1)}
                     >
                         <FontAwesomeIcon
@@ -21,7 +21,7 @@ function SavedStrumPatternListElement(props) {
                         {props.listIndex + 1}
                     </div>
                     <button
-                        data-html2canvas-ignore
+                        //data-html2canvas-ignore
                         onClick={() => props.moveListIndexFunc(props.listIndex, props.listIndex + 1)}
                     >
                         <FontAwesomeIcon

@@ -23,13 +23,20 @@ function SavedStrumPatternList(props) {
         );
     });
 
+    function onClone(cloneDoc) {
+        let buttonNodes = cloneDoc.getElementsByTagName('button');
+        for (let button of buttonNodes) {
+            button.style.visibility = 'hidden';
+        }
+    }
+
     function saveListAsPDF() {
         const element = document.getElementById('saved-strumming-pattern-list');
         const opt = {
-            margin: 20,
+            margin: [10, 40, 10, 0],
             filename: 'Saved Strumming Patterns.pdf',
             html2canvas: {
-                onclone: null, // TODO: Callback func to add header and increase space between index and pattern
+                onclone: onClone,
             },
             jsPDF: {
                 format: 'letter',
