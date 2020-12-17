@@ -10,9 +10,10 @@
     outline: 0;
     color: #3D73E4;
     border: 2px solid #3D73E4;
-    /*border-radius: 0.25rem;*/
     box-shadow: 3px 3px 3px rgba(0,0,0,0.3); /*black with 30% opacity*/
     cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 0; /* 0.25rem */
 }
 
 .button-ripple:hover {

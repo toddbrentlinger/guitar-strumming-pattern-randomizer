@@ -26,16 +26,19 @@ function SavedStrumPatternList(props) {
     function saveListAsPDF() {
         const element = document.getElementById('saved-strumming-pattern-list');
         const opt = {
-            margin: 1,
+            margin: 20,
             filename: 'Saved Strumming Patterns.pdf',
-            /*
-            html2Canvas: {
-                ignoreElements: (element) => (element.tagName == 'BUTTON')
-            }
-            */
+            html2canvas: {
+                onclone: null, // TODO: Callback func to add header and increase space between index and pattern
+            },
+            jsPDF: {
+                format: 'letter',
+            },
         };
-
-        html2pdf().set(opt).from(element).save();
+        // New Promise-based usage
+        //html2pdf().set(opt).from(element).save();
+        // Old monolithic-style usage
+        html2pdf(element, opt);
     }
 
     return (
