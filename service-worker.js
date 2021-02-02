@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/guitar-strumming-pattern-randomizer/precache-manifest.ebd265eb1d011e56778b163c55373590.js"
+  "/guitar-strumming-pattern-randomizer/precache-manifest.56f6dce082b45027e11bb8a5eba465b8.js"
 );
 
 self.addEventListener('message', (event) => {
