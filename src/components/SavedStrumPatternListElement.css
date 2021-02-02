@@ -13,6 +13,6 @@
     justify-content: space-between;
 }
 
-.saved-strum-pattern-list-element-button-container > button {
+.saved-strum-pattern-list-element-container button {
     cursor: pointer;
 }

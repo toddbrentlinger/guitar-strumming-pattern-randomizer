@@ -99,7 +99,7 @@ function App(props) {
             <header className="App-header">
                 <div className="logo-container">
                     <a href="https://www.justinguitar.com">
-                        <img src={logo} alt="Justin Guitar logo" />
+                        <img src={logo} alt="Justin Guitar logo" width="400" height="106" />
                     </a>
                 </div>
             </header>
