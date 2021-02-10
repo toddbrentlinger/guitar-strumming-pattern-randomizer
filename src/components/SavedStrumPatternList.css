@@ -1,3 +1,8 @@
 .saved-strumming-pattern-list-container > li {
     list-style-type: none;
+    margin: 2px 0;
+}
+
+#saved-strumming-pattern-list {
+    padding: 0;
 }

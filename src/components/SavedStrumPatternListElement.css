@@ -15,4 +15,11 @@
 
 .saved-strum-pattern-list-element-container button {
     cursor: pointer;
+    padding: 1px 6px;
+    margin: 0;
+    box-shadow: none;
+}
+
+.saved-strum-pattern-list-element-container button:active {
+    box-shadow: none;
 }

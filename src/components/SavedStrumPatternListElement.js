@@ -13,6 +13,8 @@ function SavedStrumPatternListElement(props) {
                         //data-html2canvas-ignore
                         onClick={() => props.moveListIndexFunc(props.listIndex, props.listIndex - 1)}
                         aria-label={`Move list item ${props.listIndex} up`}
+                        className="button-ripple"
+                        type="button"
                     >
                         <FontAwesomeIcon
                             icon={faChevronUp}
@@ -25,6 +27,8 @@ function SavedStrumPatternListElement(props) {
                         //data-html2canvas-ignore
                         onClick={() => props.moveListIndexFunc(props.listIndex, props.listIndex + 1)}
                         aria-label={`Move list item ${props.listIndex} down`}
+                        className="button-ripple"
+                        type="button"
                     >
                         <FontAwesomeIcon
                             icon={faChevronDown}
@@ -38,6 +42,8 @@ function SavedStrumPatternListElement(props) {
                     data-html2canvas-ignore
                     onClick={() => props.removeListIndexFunc(props.listIndex)}
                     aria-label={`Remove list item ${props.listIndex}`}
+                    className="button-ripple"
+                    type="button"
                 >
                     <FontAwesomeIcon
                         icon={faTrashAlt}

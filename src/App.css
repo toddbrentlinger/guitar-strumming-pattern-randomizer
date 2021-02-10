@@ -54,13 +54,13 @@ main {
     display: inline-block;
     min-width: 50%;
     margin: 0 auto;
-    padding: 0 1em;
     background-color: white;
     flex: 1;
 }
 
 h1 {
     color: #6599ca;
+    padding: 0 .5em;
 }
 
 h2 {

@@ -34,18 +34,24 @@ function SavedStrumPatternList(props) {
         const element = document.getElementById('saved-strumming-pattern-list');
         const opt = {
             margin: [10, 40, 10, 0],
+            //margin: 1,
             filename: 'Saved Strumming Patterns.pdf',
             html2canvas: {
                 onclone: onClone,
+                scale: 2,
+                scrollX: 0,
+                scrollY: 0,
+                width: 596
             },
             jsPDF: {
                 format: 'letter',
+                //format: [element.clientWidth, element.clientHeight],
             },
         };
         // New Promise-based usage
-        //html2pdf().set(opt).from(element).save();
+        html2pdf().set(opt).from(element).save();
         // Old monolithic-style usage
-        html2pdf(element, opt);
+        //html2pdf(element, opt);
     }
 
     return (
