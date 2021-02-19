@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e7cca87b9dd93a3e9737fe00d2f6d3a",
+    "revision": "a819b363f9f6a914f0706fad481de4c2",
     "url": "/guitar-strumming-pattern-randomizer/index.html"
   },
   {
-    "revision": "41c37d9639b6a819740d",
-    "url": "/guitar-strumming-pattern-randomizer/static/css/main.86ffc77a.chunk.css"
+    "revision": "d2835814c33dc5d65591",
+    "url": "/guitar-strumming-pattern-randomizer/static/css/main.13570dd8.chunk.css"
   },
   {
     "revision": "79d6256a01ee1ef2109d",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/guitar-strumming-pattern-randomizer/static/js/2.a1c25442.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "41c37d9639b6a819740d",
-    "url": "/guitar-strumming-pattern-randomizer/static/js/main.891e51e0.chunk.js"
+    "revision": "d2835814c33dc5d65591",
+    "url": "/guitar-strumming-pattern-randomizer/static/js/main.2886f0e4.chunk.js"
   },
   {
     "revision": "a70f3a44017a2a479f98",
